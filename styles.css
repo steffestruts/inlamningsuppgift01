@@ -3,3 +3,44 @@
   margin: 0;
   padding: 0;
 }
+
+:root {
+
+  /* Grayscale */
+  --gray-100: #F3F6FF;
+  --gray-200: #EFF2FC;
+  --gray-300: #E2E5F1;
+  --gray-400: #D4D7E5;
+  --gray-500: #B4B7C9;
+  --gray-600: #9397AD;
+  --gray-700: #565973;
+  --gray-800: #33354D;
+  --gray-900: #0B0F19;
+
+  /* Brand/Gradient */
+  --primary: #6366F1;
+  --blue-lotus: #6366F1;
+  --lavender-indigo: #8B5CF6;
+  --pinkish-purple: #D946EF;
+
+  /* System */
+  --error: #EF4444;
+  --success: #22C55E;
+  --warning: #FFBA08;
+  --info: #4C82F7;
+
+  /* Shadow */
+  --small-shadow-1: 0, 4.4, 12, -1, rgba(19, 16, 34, 0.06);
+  --small-shadow-2: 0, 2, 6.4, -1, rgba(19, 16, 34, 0.03);
+  --medium-shadow-1: 0, 4.4, 20, -1, rgba(19, 16, 34, 0.05);
+  --medium-shadow-2: 0, 4, 9, -1, rgba(19, 16, 34, 0.03);
+  --large-shadow-1: 0, 4.8, 24.4, -6, rgba(19, 16, 34, 0.1);
+  --large-shadow-2: 0, 4, 13, -2, rgba(19, 16, 34, 0.06);
+  --brand-btn: 0, 8, 18, -8, rgba(99, 102, 241, 0.9);
+  --secondary: 0, 8, 18, -8, rgba(19, 16, 34, 0.15);
+}
+
+header {
+  background: rgb(99,102,241);
+  background: radial-gradient(circle, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
+}
