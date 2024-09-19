@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Silicon</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Navigation: Menu With Dark/Light Switch -->
@@ -15,11 +18,13 @@
         <a href="#">Features</a>
       </nav>
       <!-- Switch Dark mode/Light mode -->
-      <span>Dark mode</span>
-      <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-      </label>
+       <div class="dark-mode-switch">
+        <span>Dark mode</span>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider-round"></span>
+        </label>
+       </div>
       <a href="#">
         <img src="images/icon-person.svg" alt="person">
         <span>Sign in/up</span>
@@ -30,21 +35,26 @@
   <!-- Section: One App Explanation Section -->
   <section>
     <div class="container">
-      <h1>Manage All Your Money in One App</h1>
-      <p>We offer you a new generation of the mobile banking. Save, spend & manage money in your pocket.</p>
-      <a href="#"><img src="images/button-appstore.svg" alt="button apple appstore"></a>
-      <a href="#"><img src="images/button-googleplay.svg" alt="button google playstore"></a>
+      <div class="one-app-explanation">
+        <h1>Manage All Your Money in One App</h1>
+        <p>We offer you a new generation of the mobile banking. Save, spend & manage money in your pocket.</p>
+        <a href="#"><img src="images/button-appstore.svg" alt="button apple appstore"></a>
+        <a href="#"><img src="images/button-googleplay.svg" alt="button google playstore"></a>
+        <a href="#">
+          <img src="images/icon-arrow-down.svg" alt="arrow down">
+          <span>Discover more</span>
+        </a>
+      </div>
+      <div class="phone-display">
+        <img class="image-phone-creditcard" src="images/iphone12-creditcard.svg" alt="phone credit card">
+        <img class="image-phone-mybudget" src="images/iphone12-mybudget.svg" alt="phone my budget">
+      </div>
     </div>
-    <a href="#">
-      <img src="images/icon-arrow-down.svg" alt="arrow down">
-      <span>Discover more</span>
-    </a>
-    <img src="images/image-phone-01.svg" alt="phone main example">
   </section>
 
   <!-- Section: One App Feature -->
-  <section>
-    <div class="container">
+  <section class="app-feature">
+    <div class="logo-ipsum">
       <img src="images/logo-logoipsum-01.svg" alt="logoipsum 1">
       <img src="images/logo-logoipsum-02.svg" alt="logoipsum 2">
       <img src="images/logo-logoipsum-03.svg" alt="logoipsum 3">
@@ -52,35 +62,35 @@
       <img src="images/logo-logoipsum-05.svg" alt="logoipsum 5">
       <img src="images/logo-logoipsum-06.svg" alt="logoipsum 6">
     </div>
-    <img src="images/image-phone-02.svg" alt="phone visa card">
+    <img src="images/app-features-phone.svg" alt="phone visa card">
     <div class="container">
       <h2>App Features</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
       
       <!-- Easy Payments -->
       <div class="container">
-        <img src="images/icon-credit-card.svg" alt="credit card">
+        <img src="images/icon-creditcard.svg" alt="credit card">
         <h3>Easy Payments</h3>
         <p>Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
       </div>
 
       <!-- Data Security -->
       <div class="container">
-        <img src="images/icon-shield.svg" alt="data security shield">
+        <img src="images/icon-security.svg" alt="data security shield">
         <h3>Data Security</h3>
         <p>Augue pulvinar justo, fermentum fames aliquam accumsan vestibulum non.</p>
       </div>
 
       <!-- Cost Statistics -->
       <div class="container">
-        <img src="images/icon-bars-graphic.svg" alt="bars graphics">
+        <img src="images/icon-money-bars.svg" alt="bars graphics">
         <h3>Cost Statistics</h3>
         <p>Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.</p>
       </div>
 
       <!-- Support 24/7 -->
       <div class="container">
-        <img src="images/icon-chat.svg" alt="chat">
+        <img src="images/icon-support247.svg" alt="chat">
         <h3>Support 24/7</h3>
         <p>A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.</p>
       </div>
@@ -102,11 +112,13 @@
   </section>
 
   <!-- Section: How The App Works -->
-  <section>
+  <section class="how-work">
     <h2>How Does It Work?</h2>
-    <img src="images/image-iphone-12-pro-01.svg" alt="iPhone Pro 01">
-    <img src="images/image-iphone-12-pro-02.svg" alt="iPhone Pro 02">
-    <img src="images/image-iphone-12-pro-03.svg" alt="iPhone Pro 03">
+    <div class="container">
+      <img src="images/cutout-iphone-graph.svg" alt="Phone Graph">
+      <img src="images/iphone-creditcard.svg" alt="Phone Creditcard">
+      <img src="images/cutout-iphone-sendmoney.svg" alt="Phone Send Money">
+    </div>
     <h3>Latest transaction history</h3>
     <p>Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum.</p>
   </section>
@@ -123,12 +135,12 @@
       <span>Learn more</span>
       <img src="images/icon-arrow-right.svg" alt="arrow right">
     </a>
-    <img src="images/image-transfer-simple-and-clear-01.svg" alt="Transfer Graph">
+    <img src="images/transfer-simple-and-clear-graph.svg" alt="Transfer Graph">
     <h2>Receive payment from international bank details</h2>
     <div class="container">
-      <img src="images/image-transfer-simple-and-clear-02.svg" alt="">
+      <img src="images/transfer-simple-and-clear-list.svg" alt="">
       <div class="container">
-        <img src="images/icon-credit-card.svg" alt="Credit Card">
+        <img src="images/icon-creditcard.svg" alt="Credit Card">
         <p>Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
       </div>
       <div class="container">
@@ -145,8 +157,8 @@
   <!-- Section: Clients Review -->
   <section>
     <h2>Clients are Loving Our App</h2>
-    <img src="images/image-testimonial-01.svg" alt="Tesimonial">
-    <img src="images/image-testimonial-02.svg" alt="Tesimonial">
+    <img src="images/testimonial-01.svg" alt="Tesimonial Fannie">
+    <img src="images/testimonial-02.svg" alt="Tesimonial Albert">
   </section>
 
   <!-- Section: Accordion With Questions And Answers-->
@@ -171,23 +183,21 @@
     </div>
 
     <div class="container">
-      <button class="accordion">Is any of my personal information stored in the App?<img src="images/icon-arrow-down.svg" alt="Arrow Down"></button>
-      <button class="accordion">What formats can I download my transaction history in?<img src="images/icon-arrow-down.svg" alt="Arrow Down"></button>
-      <button class="accordion">Can I schedule future transfers? <img src="images/icon-arrow-down.svg" alt="Arrow Down"></button>
+      <div class="accordion">Is any of my personal information stored in the App?<img src="images/icon-chevron-down.svg" alt="Arrow Down"></div>
+      <div class="accordion">What formats can I download my transaction history in?<img src="images/icon-chevron-down.svg" alt="Arrow Down"></div>
+      <div class="accordion">Can I schedule future transfers? <img src="images/icon-chevron-down.svg" alt="Arrow Down"></div>
       
       <div class="panel">
         <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
       </div>
 
-      <button class="accordion">Can I create my own password that is easy for me to remember?<img src="images/icon-arrow-down.svg" alt="Arrow Down"></button>
-      <button class="accordion">What happens if I forget or lose my password?<img src="images/icon-arrow-down.svg" alt="Arrow Down"></button>
+      <div class="accordion">Can I create my own password that is easy for me to remember?<img src="images/icon-chevron-down.svg" alt="Arrow Down"></div>
+      <div class="accordion">What happens if I forget or lose my password?<img src="images/icon-chevron-down.svg" alt="Arrow Down"></div>
 
       <div class="container">
         <h3>Subscribe to our newsletter to stay informed about latest updates</h3>
-        <div class="container">
-          <img src="images/icon-envelope.svg" alt="">
-          <a href="#">Subscribe</a>
-        </div>
+        <img src="images/icon-envelope.svg" alt="">
+        <a href="#">Subscribe</a>
       </div>
     </div>
   </section>

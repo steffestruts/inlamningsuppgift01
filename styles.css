@@ -1,9 +1,3 @@
-*, ::before, ::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 :root {
 
   /* Grayscale */
@@ -40,7 +34,112 @@
   --secondary: 0, 8, 18, -8, rgba(19, 16, 34, 0.15);
 }
 
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 header {
   background: rgb(99,102,241);
   background: radial-gradient(circle, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
+}
+
+header {
+  .container {
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1296px;
+    width: 100%;
+  }
+  img {
+    margin-right: 48px;
+  }
+  nav a {
+    color: var(--gray-800);
+    font-weight: 600;
+    line-height: 1.6;
+    text-decoration: none;
+  }
+}
+
+.dark-mode-switch {
+  .switch {
+    background-color: var(--gray-600);
+    border-radius: 20px;
+    display: block;
+    height: 24px;
+    width: 46px;
+    .slider-round {
+      background-color: white;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+    }
+  }
+}
+
+section {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0 auto;
+    max-width: 1296px;
+    width: 100%;
+  }
+}
+
+.one-app-explanation {
+  grid-column: 1 / 3;
+}
+
+.phone-display {
+  bottom: 0;
+  grid-column: 3 / 5;
+  position: relative;
+  height: 814px;
+  overflow: hidden;
+  img {
+    position: absolute;
+  }
+  .image-phone-creditcard {
+    right: 0;
+    z-index: 5;
+  }
+  .image-phone-mybudget {
+    right: 240px;
+    top: 135px;
+    z-index: 4;
+  }
+}
+
+.app-feature {
+  .logo-ipsum {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    img {
+      border: 1px solid var(--gray-300);
+      border-radius: 8px;
+      padding: 2rem 2.5rem;
+    }
+  }
+}
+
+.how-work {
+  h2 {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+  }
 }
