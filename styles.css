@@ -32,6 +32,22 @@
   --large-shadow-2: 0, 4, 13, -2, rgba(19, 16, 34, 0.06);
   --brand-btn: 0, 8, 18, -8, rgba(99, 102, 241, 0.9);
   --secondary: 0, 8, 18, -8, rgba(19, 16, 34, 0.15);
+
+  /* Display */
+  --display1: 5rem;
+  --display2: 4.2rem;
+  --display3: 4rem;
+  --display4: 3.5rem;
+  --display5: 3rem;
+  --display6: 2.625rem;
+
+  /* Headings */
+  --heading1: 2.5rem;
+  --heading2: 2rem;
+  --heading3: 1.75rem;
+  --heading4: 1.5rem;
+  --heading5: 1.25rem;
+  --heading6: 1rem;
 }
 
 *, ::before, ::after {
@@ -39,6 +55,13 @@
   margin: 0;
   padding: 0;
 }
+
+h1 {font-size: var(--heading1); font-weight: 800; line-height: 1.3;}
+h2 {font-size: var(--heading2); font-weight: 800; line-height: 1.3;}
+h3 {font-size: var(--heading3); font-weight: 800; line-height: ;}
+h4 {font-size: var(--heading4); font-weight: ; line-height: ;}
+h5 {font-size: var(--heading5); font-weight: ; line-height: ;}
+h6 {font-size: var(--heading6); font-weight: ; line-height: ;}
 
 body {
   font-family: "Manrope", sans-serif;
@@ -133,6 +156,9 @@ section {
       padding: 2rem 2.15rem;
     }
   }
+  .container {
+    display: flex;
+  }
 }
 
 .how-work {
@@ -143,5 +169,11 @@ section {
   .container {
     display: flex;
     justify-content: center;
+  }
+}
+
+.description-feature {
+  .container {
+    display: flex;
   }
 }
