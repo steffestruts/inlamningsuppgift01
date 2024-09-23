@@ -58,10 +58,17 @@
 
 h1 {font-size: var(--heading1); font-weight: 800; line-height: 1.3;}
 h2 {font-size: var(--heading2); font-weight: 800; line-height: 1.3;}
-h3 {font-size: var(--heading3); font-weight: 800; line-height: ;}
-h4 {font-size: var(--heading4); font-weight: ; line-height: ;}
-h5 {font-size: var(--heading5); font-weight: ; line-height: ;}
-h6 {font-size: var(--heading6); font-weight: ; line-height: ;}
+h3 {font-size: var(--heading3); font-weight: 800; line-height: 1.3;}
+h4 {font-size: var(--heading4); font-weight: 800; line-height: 1.4;}
+h5 {font-size: var(--heading5); font-weight: 800; line-height: 1.4;}
+h6 {font-size: var(--heading6); font-weight: 800; line-height: 1.4;}
+
+.display1 {font-size: var(--display1); font-weight: 800; line-height: 1.3;}
+.display2 {font-size: var(--display2); font-weight: 800; line-height: 1.3;}
+.display3 {font-size: var(--display3); font-weight: 800; line-height: 1.3;}
+.display4 {font-size: var(--display4); font-weight: 800; line-height: 1.3;}
+.display5 {font-size: var(--display5); font-weight: 800; line-height: 1.3;}
+.display6 {font-size: var(--display6); font-weight: 800; line-height: 1.3;}
 
 body {
   font-family: "Manrope", sans-serif;
