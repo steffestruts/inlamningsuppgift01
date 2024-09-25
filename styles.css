@@ -123,6 +123,11 @@ nav {
   display: flex;
   padding-block: 1rem;
   width: 100%;
+  a {
+    color: var(--gray-800);
+    font-weight: 600;
+    text-decoration: none;
+  }
 }
 
 .btn-signin {
@@ -147,6 +152,7 @@ nav {
   background: #4C82F7;
   background: rgb(99,102,241);
   background: radial-gradient(circle, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
+  margin-bottom: 6rem;
 }
 
 .discover-more-btn {
@@ -215,28 +221,186 @@ nav {
   }
 }
 
-.feature-container {
+.app-features-description {
+  p {
+    color: var(--gray-600);
+    font-size: var(--lead-text);
+  }
+}
+
+.app-features {
+  .tron-city {
+    color: var(--gray-700);
+    grid-template-columns: 1fr 1fr 1fr; /* minmax(0, 1fr) */
+  }
+}
+
+.app-features-right {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.app-features-container {
   display: flex;
-  .feature-icon {
+  /* height: 118px; */
+  width: 345px;
+  h5 {
+    margin-bottom: .75rem;
+  }
+  .app-features-icon {
+    align-items: center;
     aspect-ratio: 1;
-    background-color: var(--primary);
+    background-color: var(--gray-100);
     border-radius: var(--border-radius-l);
+    display: flex;
     height: 60px;
+    justify-content: center;
+    margin-right: 1.5rem;
+    img {
+      aspect-ratio: 1;
+      height: 28px;
+    }
+  }
+}
+
+/* Third Section: How Does It Work? */
+
+.how-does-it-work {
+  padding-block: 5rem;
+  text-align: center;
+  h2 {
+    margin-bottom: 3rem;
+  }
+  img {
+    margin-bottom: 2.5rem;
+  }
+  h4 {
+    margin-bottom: .75rem;
+  }
+  p {
+    margin: 0 auto;
+    width: 636px;
+  }
+}
+
+
+/* Fourth section: Transfer Simple and Clear */
+
+.transfer-simple {
+  .btn-learn-more {
+    align-items: center;
+    background-color: var(--primary);
+    border-radius: var(--border-radius-m);
+    color: var(--standard-color);
+    display: flex;
+    height: 44px;
+    justify-content: center;
+    text-decoration: none;
+    width: 159px;
+  }
+  ul {
+    list-style-image: url("images/icon-check-circle.svg");
+  }
+}
+
+.transfer-simple-container {
+  width: 243px;
+  .transfer-simple-icon {
+    align-items: center;
+    aspect-ratio: 1;
+    background-color: var(--gray-100);
+    border-radius: var(--border-radius-l);
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    margin-bottom: 1rem;
+    img {
+      aspect-ratio: 1;
+      height: 28px;
+    }
+  }
+}
+
+/* Fifth section: Testimonial */
+
+.testimonial-clients {
+  padding-block: 5rem;
+  h2 {
+    text-wrap: balance;
+    width: 250px;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 /* Sixth section: FAQ */
 
 .faq-and-newsletter {
-  display: flex;
+  display: grid;
+}
+
+.faq-and-newsletter-phone, .faq-and-newsletter-chat {
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius-l);
+  color: var(--gray-700);
+  font-size: var(--s-text);
+  height: 166px;
+  padding: 1.5rem;
+  width: 196px;
+  a {
+    align-items: center;
+    display: flex;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+
+.faq-and-newsletter-chat a {
+  color: var(--primary);
+}
+
+.faq-and-newsletter-chat a {
+  color: var(--success);
 }
 
 .accordion {
+  align-items: center;
   border-radius: var(--border-radius-l);
   box-shadow: var(--small-shadow-1), var(--small-shadow-2);
   display: flex;
   font-weight: 600;
   height: 68px;
+  padding-inline: 1.5rem;
+  .chevron-down {
+    align-items: center;
+    aspect-ratio: 1;
+    background-color: var(--gray-100);
+    border-radius: 50%;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    img {
+      height: 6px;
+      width: 10px;
+    }
+  }
+  .chevron-up {
+    align-items: center;
+    aspect-ratio: 1;
+    background-color: var(--primary);
+    border-radius: 50%;
+    box-shadow: var(--brand-btn);
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    img {
+      height: 6px;
+      width: 10px;
+    }
+  }
 }
 
 .newsletter-box {
