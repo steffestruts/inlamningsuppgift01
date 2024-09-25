@@ -38,14 +38,14 @@
 
 
   /* Shadow */
-  --small-shadow-1: 0, 4.4, 12, -1, rgba(19, 16, 34, 0.06);
-  --small-shadow-2: 0, 2, 6.4, -1, rgba(19, 16, 34, 0.03);
-  --medium-shadow-1: 0, 4.4, 20, -1, rgba(19, 16, 34, 0.05);
-  --medium-shadow-2: 0, 4, 9, -1, rgba(19, 16, 34, 0.03);
-  --large-shadow-1: 0, 4.8, 24.4, -6, rgba(19, 16, 34, 0.1);
-  --large-shadow-2: 0, 4, 13, -2, rgba(19, 16, 34, 0.06);
-  --brand-btn: 0, 8, 18, -8, rgba(99, 102, 241, 0.9);
-  --secondary: 0, 8, 18, -8, rgba(19, 16, 34, 0.15);
+  --small-shadow-1: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
+  --small-shadow-2: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+  --medium-shadow-1: 0px 4.4px 20px -1px rgba(19, 16, 34, 0.05);
+  --medium-shadow-2: 0px 4px 9px -1px rgba(19, 16, 34, 0.03);
+  --large-shadow-1: 0px 4.8px 24.4px -6px rgba(19, 16, 34, 0.1);
+  --large-shadow-2: 0px 4px 13px -2px rgba(19, 16, 34, 0.06);
+  --brand-btn: 0px 8px 18px -8px rgba(99, 102, 241, 0.9);
+  --secondary: 0px 8px 18px -8px rgba(19, 16, 34, 0.15);
 
   /* Display */
   --display1: 5rem;
@@ -70,40 +70,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-input, button, textarea, select {
-  font-size: inherit;
-}
-
-.container {
-  margin-inline: auto;
-  padding-inline: 1rem;
-  width: 100%;
-}
-
-.space-y-2 > * + * {
-  margin-top: 2rem;
-}
-
-.space-y-3 > * + * {
-  margin-top: 3rem;
-}
-
-.space-y-4 > * + * {
-  margin-top: 4rem;
-}
-
-.sr-only {
-  border-width: 0;
-  clip: rect(0,0,0,0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -138,56 +104,78 @@ body {
   width: 100%;
 }
 
-header {
-  .container {
-    align-items: center;
-    display: flex;
-  }
-  img {
-    margin-right: 48px;
-  }
-  nav a {
-    color: var(--gray-800);
-    font-weight: 600;
-    line-height: 1.6;
-    text-decoration: none;
+section:nth-child(2n+3) {
+  /* Applying background-color on every second section with a offset/start on the third section, probably unnecessary */
+  background-color: var(--gray-100);
+}
+
+/* The Grid */
+
+.tron-city {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+/* First section: Manage One App */
+
+nav {
+  align-items: center;
+  display: flex;
+  padding-block: 1rem;
+  width: 100%;
+}
+
+.btn-signin {
+  align-items: center;
+  background-color: var(--primary);
+  border-radius: var(--border-radius-m);
+  color: var(--standard-color);
+  display: flex;
+  font-size: var(--s-text);
+  font-weight: 600;
+  height: 36px;
+  line-height: 1.8;
+  justify-content: center;
+  text-decoration: none;
+  width: 140px;
+  span {
+    margin-left: .5rem;
   }
 }
 
-.dark-mode-switch {
-  .switch {
-    background-color: var(--gray-600);
-    border-radius: 20px;
-    display: block;
-    height: 24px;
-    width: 46px;
-    .slider-round {
-      background-color: white;
-      border-radius: 50%;
-      height: 20px;
-      width: 20px;
-    }
-  }
-}
-
-section {
-  .container {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; */
-    margin: 0 auto;
-    max-width: 1296px;
-    width: 100%;
-  }
-}
-
-.one-app-explanation {
+.manage-one-app {
+  background: #4C82F7;
   background: rgb(99,102,241);
   background: radial-gradient(circle, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
-  grid-column: 1 / 3;
+}
+
+.discover-more-btn {
+  align-items: center;
+  color: var(--gray-700);
+  cursor: pointer;
+  display: flex;
+  text-decoration: none;
+  .discover-more-btn-chevron {
+    align-items: center;
+    aspect-ratio: 1;
+    background-color: var(--standard-color);
+    border-radius: 50%;
+    box-shadow: var(--small-shadow-1), var(--small-shadow-2);
+    display: flex;
+    height: 44px;
+    justify-content: center;
+  }
+  img {
+    height: 16px;
+    width: 12px;
+  }
+  span {
+    margin-left: 1rem;
+  }
 }
 
 .phone-display {
-  grid-column: 3 / 5;
+  grid-column: 3 / 6;
   position: relative;
   height: 688px;
   overflow: hidden;
@@ -205,39 +193,51 @@ section {
   }
 }
 
-.app-feature {
-  .logo-ipsum {
-    display: flex;
-    gap: .5rem;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 1296px;
-    width: 100%;
-    img {
-      border: 1px solid var(--gray-300);
-      border-radius: 8px;
-      padding: 2rem 2.15rem;
-    }
-  }
-  .container {
-    display: flex;
+.one-app-explanation {
+  font-size: 1.125rem;
+  grid-column: 1 / 3;
+  text-wrap: balance;
+}
+
+/* Second section: App Features */
+
+.logo-ipsum {
+  display: flex;
+  gap: .5rem;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1296px;
+  width: 100%;
+  img {
+    border: 1px solid var(--gray-300);
+    border-radius: 8px;
+    padding: 2rem 2.15rem;
   }
 }
 
-.how-work {
-  h2 {
-    margin-bottom: 3rem;
-    text-align: center;
+.feature-container {
+  display: flex;
+  .feature-icon {
+    aspect-ratio: 1;
+    background-color: var(--primary);
+    border-radius: var(--border-radius-l);
+    height: 60px;
   }
 }
 
-.description-feature {
-  .container {
-    display: flex;
-  }
+/* Sixth section: FAQ */
+
+.faq-and-newsletter {
+  display: flex;
 }
 
-/* Section: Newsletter */
+.accordion {
+  border-radius: var(--border-radius-l);
+  box-shadow: var(--small-shadow-1), var(--small-shadow-2);
+  display: flex;
+  font-weight: 600;
+  height: 68px;
+}
 
 .newsletter-box {
   background-color: var(--gray-100);
