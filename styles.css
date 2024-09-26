@@ -113,7 +113,7 @@ section:nth-child(2n+3) {
 
 .tron-city {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
 }
 
 /* First section: Manage One App */
@@ -121,6 +121,7 @@ section:nth-child(2n+3) {
 nav {
   align-items: center;
   display: flex;
+  margin-bottom: 7rem;
   padding-block: 1rem;
   width: 100%;
   a {
@@ -160,6 +161,7 @@ nav {
   color: var(--gray-700);
   cursor: pointer;
   display: flex;
+  font-size: var(--s-text);
   text-decoration: none;
   .discover-more-btn-chevron {
     align-items: center;
@@ -211,7 +213,7 @@ nav {
   display: flex;
   gap: .5rem;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 0 auto 7rem auto;
   max-width: 1296px;
   width: 100%;
   img {
@@ -299,6 +301,9 @@ nav {
     text-decoration: none;
     width: 159px;
   }
+  .container {
+    margin-block: 7rem;
+  }
   ul {
     list-style-image: url("images/icon-check-circle.svg");
   }
@@ -327,8 +332,9 @@ nav {
 .testimonial-clients {
   padding-block: 5rem;
   h2 {
+    font-size: var(--heading1);
     text-wrap: balance;
-    width: 250px;
+    width: 306px;
   }
   .container {
     display: grid;
@@ -338,11 +344,16 @@ nav {
 
 /* Sixth section: FAQ */
 
+
 .faq-and-newsletter {
-  display: grid;
+  margin-top: 7rem;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-.faq-and-newsletter-phone, .faq-and-newsletter-chat {
+.faq-and-newsletter-contact-phone, .faq-and-newsletter-contact-chat {
   border: 1px solid var(--gray-300);
   border-radius: var(--border-radius-l);
   color: var(--gray-700);
@@ -355,14 +366,17 @@ nav {
     display: flex;
     font-weight: 600;
     text-decoration: none;
+    img {
+      margin-left: .5rem;
+    }
   }
 }
 
-.faq-and-newsletter-chat a {
+.faq-and-newsletter-contact-chat a {
   color: var(--primary);
 }
 
-.faq-and-newsletter-chat a {
+.faq-and-newsletter-contact-chat a {
   color: var(--success);
 }
 
@@ -373,7 +387,10 @@ nav {
   display: flex;
   font-weight: 600;
   height: 68px;
+  justify-content: space-between;
+  margin-block: 1rem;
   padding-inline: 1.5rem;
+  width: 746px;
   .chevron-down {
     align-items: center;
     aspect-ratio: 1;
@@ -404,16 +421,39 @@ nav {
 }
 
 .newsletter-box {
+  align-items: center;
   background-color: var(--gray-100);
   border-radius: var(--border-radius-l);
   display: flex;
+  margin: 7rem auto 0 auto;
+  max-width: 1296px;
   padding: 5rem;
+  width: 100%;
   img {
     margin-right: 2rem;
   }
+  input {
+    background: url("images/icon-envelope.svg") no-repeat center left 16px;
+    background-color: white;
+    background-size: 20px;
+    border: 1px solid var(--gray-500);
+    border-radius: var(--border-radius-l) 0 0 var(--border-radius-l);
+    color: var(--gray-500);
+    font-size: var(--m-text);
+    height: 52px;
+    padding: .75rem .75rem .75rem 3rem;
+  }
+
   .btn-subscribe {
     background-color: var(--primary);
+    border: none;
+    border-radius: 0 var(--border-radius-l) var(--border-radius-l) 0;
     color: var(--standard-color);
+    font-size: var(--m-text);
+    font-weight: 600;
+    height: 52px;
+    padding-block: .813rem;
+    padding-inline: 2rem;
   }
   .newsletter-envelope {
     fill: var(--standard-color);
