@@ -427,8 +427,11 @@ input:checked + .slider:before {
   margin: 0 auto;
   max-width: 1076px;
   ul {
-    margin-left: 1rem;
-    list-style-image: url("images/icon-check-circle.svg");
+    list-style: none;
+    li{
+      padding-left: 1.75rem;
+      background: url("images/icon-check-circle.svg") no-repeat center left 0;
+    }
     li + li {
       margin-top: .75rem;;
     }
@@ -554,8 +557,8 @@ input:checked + .slider:before {
   align-items: center;
   display: flex;
   font-weight: 600;
+  margin-bottom: 1rem;
   justify-content: space-between;
-  margin-block: 1rem;
   .chevron-up {
     align-items: center;
     aspect-ratio: 1;
