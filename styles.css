@@ -92,6 +92,13 @@ h6 {font-size: var(--heading6); line-height: 1.4;}
 .display5 {font-size: var(--display5); font-weight: 800; line-height: 1.3;}
 .display6 {font-size: var(--display6); font-weight: 800; line-height: 1.3;}
 
+html {
+  /* Adds padding so scroll-behavior stops with some margin from browser top view edge */
+  scroll-padding: 2rem;
+  /* Smoother scroll */
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--gray-700);
   font-family: "Manrope", sans-serif;
@@ -132,6 +139,7 @@ nav {
     text-decoration: none;
   }
   a:hover {
+    color: var(--primary);
     text-decoration: underline;
   }
 }
@@ -229,6 +237,17 @@ input:checked + .slider:before {
   }
 }
 
+.btn-signin:hover {
+  background-color: var(--standard-color);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  text-decoration: none;
+  img {
+    /* Never used filter before. Credit for change image SVG fill: https://angel-rs.github.io/css-color-filter-generator/ */
+    filter: brightness(0) saturate(100%) invert(38%) sepia(91%) saturate(2677%) hue-rotate(225deg) brightness(98%) contrast(92%);
+  }
+}
+
 .manage-one-app {
   background: #4C82F7;
   background: rgb(99,102,241);
@@ -261,6 +280,15 @@ input:checked + .slider:before {
   font-size: var(--s-text);
   position: absolute;
   text-decoration: none;
+  &:hover {
+    .discover-more-btn-chevron {
+      background-color: var(--primary);
+      img {
+        /* Never used filter before. Credit for change image SVG fill: https://angel-rs.github.io/css-color-filter-generator/ */
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(4488%) hue-rotate(138deg) brightness(116%) contrast(105%);
+      }
+    }
+  }
   .discover-more-btn-chevron {
     align-items: center;
     aspect-ratio: 1;
@@ -270,6 +298,9 @@ input:checked + .slider:before {
     display: flex;
     height: 44px;
     justify-content: center;
+  }
+  &:hover {
+    color: var(--primary);
   }
   img {
     height: 16px;
@@ -408,6 +439,16 @@ input:checked + .slider:before {
     justify-content: center;
     text-decoration: none;
     width: 159px;
+    &:hover {
+      background-color: var(--standard-color);
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      text-decoration: none;
+      img {
+        /* Never used filter before. Credit for change image SVG fill: https://angel-rs.github.io/css-color-filter-generator/ */
+        filter: brightness(0) saturate(100%) invert(38%) sepia(91%) saturate(2677%) hue-rotate(225deg) brightness(98%) contrast(92%);
+      }
+    }
   }
   .container {
     margin-block: 7rem;
@@ -508,7 +549,6 @@ input:checked + .slider:before {
   p {
     margin-bottom: 2.5rem;
     max-width: 416px;
-    widows: 3;
   }
 }
 
@@ -525,7 +565,7 @@ input:checked + .slider:before {
   border-radius: var(--border-radius-l);
   color: var(--gray-700);
   font-size: var(--s-text);
-  height: 166px;
+  min-height: 166px;
   padding: 1.5rem;
   width: 196px;
   a {
@@ -533,6 +573,9 @@ input:checked + .slider:before {
     display: flex;
     font-weight: 600;
     text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
     img {
       margin-left: .5rem;
     }
@@ -545,6 +588,7 @@ input:checked + .slider:before {
 
 .faq-and-newsletter-contact-chat a {
   color: var(--success);
+  margin-bottom: 1rem;
 }
 
 .accordion-open {
@@ -644,6 +688,7 @@ input:checked + .slider:before {
     border: none;
     border-radius: 0 var(--border-radius-l) var(--border-radius-l) 0;
     color: var(--standard-color);
+    cursor: pointer;
     font-size: var(--m-text);
     font-weight: 600;
     height: 52px;
