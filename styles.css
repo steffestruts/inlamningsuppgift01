@@ -517,7 +517,7 @@ input:checked + .slider:before {
 
 /* Fifth section: Testimonial */
 
-.testimonial-clients {
+.testimonial {
   padding-block: 5rem;
   h2 {
     font-size: var(--heading1);
@@ -526,7 +526,55 @@ input:checked + .slider:before {
   }
   .container {
     display: grid;
+    gap: 1.5rem;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.testimonial-client {
+  background-color: var(--standard-color);
+  border-radius: var(--border-radius-l);
+  box-shadow: var(--large-shadow-1, --large-shadow-2);
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+  position: relative;
+  &::before {
+    align-items: center;
+    aspect-ratio: 1;
+    background-color: var(--primary);
+    background: var(--primary) url("images/icon-quote.svg") center center/18px 18px no-repeat;
+    border-radius: var(--border-radius-m);
+    box-shadow: var(--medium-shadow-1);
+    content: url("");
+    color: var(--standard-color);
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    left: 24px;
+    position: absolute;
+    top: -20px;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  h4 {
+    color: var(--gray-600);
+    font-size: var(--s-text);
+    font-weight: 400;
+    line-height: 1;
+  }
+  .head {
+    margin-right: 1rem;
+  }
+  .rating {
+    margin-block: 1.5rem;
+  }
+  .text {
+    color: var(--gray-700);
+    margin-bottom: 1.5rem;
+  }
+  .person {
+    align-items: center;
+    display: flex;
   }
 }
 
@@ -591,7 +639,7 @@ input:checked + .slider:before {
   margin-bottom: 1rem;
 }
 
-.accordion-open {
+/* .accordion-open {
   border-radius: var(--border-radius-l);
   box-shadow: var(--small-shadow-1), var(--small-shadow-2);
   padding: 1.5rem;
@@ -619,7 +667,7 @@ input:checked + .slider:before {
   }
 }
 
-.accordion {
+.accordions {
   align-items: center;
   border-radius: var(--border-radius-l);
   box-shadow: var(--small-shadow-1), var(--small-shadow-2);
@@ -657,6 +705,61 @@ input:checked + .slider:before {
       width: 10px;
     }
   }
+} */
+
+.accordion {
+  align-items: center;
+  background-color: var(--standard-color);
+  border-radius: var(--border-radius-l);
+  box-shadow: var(--small-shadow-1), var(--small-shadow-2);
+  display: flex;
+  font-weight: 600;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-inline: 1.5rem;
+  color: var(--gray-900);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  .chevron {
+    align-items: center;
+    aspect-ratio: 1;
+    background: var(--gray-100) url("images/icon-chevron-down.svg") center center/12px 12px no-repeat;
+    border-radius: 50%;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+  }
+}
+
+.accordion.active {
+  border-radius: var(--border-radius-l) var(--border-radius-l) 0 0;
+  box-shadow: none;
+  .chevron {
+    align-items: center;
+    aspect-ratio: 1;
+    background: var(--primary) url("images/icon-chevron-up.svg") center center/12px 12px no-repeat;
+    border-radius: 50%;
+    box-shadow: var(--brand-btn);
+    display: flex;
+    height: 36px;
+    justify-content: center;
+  }
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  background-color: white;
+  border-radius: 0 0 var(--border-radius-l) var(--border-radius-l);
+  color: var(--gray-700);
+  display: none;
+  overflow: hidden;
+  padding: 18px;
+  transition: max-height 0.2s ease-out;
 }
 
 .newsletter-box {
@@ -665,7 +768,6 @@ input:checked + .slider:before {
   border-radius: var(--border-radius-l);
   display: flex;
   margin: 7rem auto 0 auto;
-  max-width: 1296px;
   padding: 5rem;
   width: 100%;
   img {
