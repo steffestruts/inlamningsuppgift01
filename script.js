@@ -1,3 +1,5 @@
+/* Credit W3schools https://www.w3schools.com/howto/howto_js_accordion.asp for JS-script */
+
 var acc = document.getElementsByClassName("accordion");
 var i;
 
@@ -16,4 +18,4 @@ for (i = 0; i < acc.length; i++) {
       panel.style.backgroundColor = "White";
     }
   });
-} 
+}
