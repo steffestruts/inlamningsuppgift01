@@ -639,92 +639,23 @@ input:checked + .slider:before {
   margin-bottom: 1rem;
 }
 
-/* .accordion-open {
-  border-radius: var(--border-radius-l);
-  box-shadow: var(--small-shadow-1), var(--small-shadow-2);
-  padding: 1.5rem;
-}
 
-.accordion-open-title {
-  align-items: center;
-  display: flex;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  justify-content: space-between;
-  .chevron-up {
-    align-items: center;
-    aspect-ratio: 1;
-    background-color: var(--primary);
-    border-radius: 50%;
-    box-shadow: var(--brand-btn);
-    display: flex;
-    height: 36px;
-    justify-content: center;
-    img {
-      height: 6px;
-      width: 10px;
-    }
-  }
-}
-
-.accordions {
-  align-items: center;
-  border-radius: var(--border-radius-l);
-  box-shadow: var(--small-shadow-1), var(--small-shadow-2);
-  display: flex;
-  font-weight: 600;
-  height: 68px;
-  justify-content: space-between;
-  margin-block: 1rem;
-  padding-inline: 1.5rem;
-  width: 746px;
-  .chevron-down {
-    align-items: center;
-    aspect-ratio: 1;
-    background-color: var(--gray-100);
-    border-radius: 50%;
-    display: flex;
-    height: 36px;
-    justify-content: center;
-    img {
-      height: 6px;
-      width: 10px;
-    }
-  }
-  .chevron-up {
-    align-items: center;
-    aspect-ratio: 1;
-    background-color: var(--primary);
-    border-radius: 50%;
-    box-shadow: var(--brand-btn);
-    display: flex;
-    height: 36px;
-    justify-content: center;
-    img {
-      height: 6px;
-      width: 10px;
-    }
-  }
-} */
 
 .accordion {
   align-items: center;
   background-color: var(--standard-color);
+  border: none;
   border-radius: var(--border-radius-l);
   box-shadow: var(--small-shadow-1), var(--small-shadow-2);
+  color: var(--gray-900);
+  cursor: pointer;
   display: flex;
   font-weight: 600;
   justify-content: space-between;
   margin-top: 1rem;
-  padding-inline: 1.5rem;
-  color: var(--gray-900);
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
   outline: none;
-  transition: 0.4s;
+  padding: 1.313rem;
+  width: 100%;
   .chevron {
     align-items: center;
     aspect-ratio: 1;
@@ -736,8 +667,16 @@ input:checked + .slider:before {
   }
 }
 
+/* Got the idea to use the :has selector, credit: https://stackoverflow.com/questions/1014861/is-there-a-css-parent-selector */
+
+.accordion-container:has(.accordion.active) {
+  border-radius: 0 0 var(--border-radius-l) var(--border-radius-l);
+  box-shadow: var(--small-shadow-1), var(--small-shadow-2);
+}
+
 .accordion.active {
   border-radius: var(--border-radius-l) var(--border-radius-l) 0 0;
+  padding-bottom: 0;
   box-shadow: none;
   .chevron {
     align-items: center;
@@ -753,13 +692,12 @@ input:checked + .slider:before {
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
-  background-color: white;
   border-radius: 0 0 var(--border-radius-l) var(--border-radius-l);
   color: var(--gray-700);
   display: none;
+  font-size: var(--s-text);
   overflow: hidden;
-  padding: 18px;
-  transition: max-height 0.2s ease-out;
+  padding: 1.125rem 1.313rem;
 }
 
 .newsletter-box {
@@ -794,8 +732,7 @@ input:checked + .slider:before {
     font-size: var(--m-text);
     font-weight: 600;
     height: 52px;
-    padding-block: .813rem;
-    padding-inline: 2rem;
+    padding: .813rem 2rem;
   }
   .newsletter-envelope {
     fill: var(--standard-color);
