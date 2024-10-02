@@ -656,6 +656,9 @@ input:checked + .slider:before {
   outline: none;
   padding: 1.313rem;
   width: 100%;
+  &:hover {
+    background-color: var(--gray-100);
+  }
   .chevron {
     align-items: center;
     aspect-ratio: 1;
@@ -676,7 +679,6 @@ input:checked + .slider:before {
 
 .accordion.active {
   border-radius: var(--border-radius-l) var(--border-radius-l) 0 0;
-  padding-bottom: 0;
   box-shadow: none;
   .chevron {
     align-items: center;
