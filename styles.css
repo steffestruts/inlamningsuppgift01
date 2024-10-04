@@ -639,8 +639,6 @@ input:checked + .slider:before {
   margin-bottom: 1rem;
 }
 
-
-
 .accordion {
   align-items: center;
   background-color: var(--standard-color);
@@ -670,7 +668,7 @@ input:checked + .slider:before {
   }
 }
 
-/* Got the idea to use the :has selector, credit: https://stackoverflow.com/questions/1014861/is-there-a-css-parent-selector */
+/* Got the idea to use the :has selector from here, credit: https://stackoverflow.com/questions/1014861/is-there-a-css-parent-selector */
 
 .accordion-container:has(.accordion.active) {
   border-radius: 0 0 var(--border-radius-l) var(--border-radius-l);
@@ -745,7 +743,9 @@ input:checked + .slider:before {
 
 footer {
   color: var(--gray-600);
-  display: flex;
-  justify-content: center;
-  padding-block: 4rem;
+  text-align: center;
+  padding-block: 3rem;
+  p {
+    margin: 0;
+  }
 }
